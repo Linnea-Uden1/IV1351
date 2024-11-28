@@ -748,12 +748,253 @@ VALUES
   ('ensemble',1,1,'12:30','13:30','2024-12-03',1),
   ('ensemble',1,1,'10:00','11:00','2024-12-04',1);
 
+  
+INSERT INTO price (lesson_type,skill_level,price)
+VALUES
+  ('ensemble','beginner','20'),
+  ('ensemble','intermediate','20'),
+  ('individual','beginner','25'),
+  ('individual','intermediate','25'),
+  ('group','beginner','20'),
+  ('group','intermediate','25');
+
+INSERT INTO lesson (lesson_type,instructor_id,room_id,start_time,end_time,date_of_lesson,price_id)
+VALUES
+  --2024
+  --December
+  ('ensemble',1,1,'11:30','12:30','2024-12-01',1),
+  ('ensemble',1,1,'10:15','11:15','2024-12-02',1),
+  ('ensemble',1,1,'12:30','13:30','2024-12-03',1),
+  ('ensemble',1,1,'10:00','11:00','2024-12-04',1),
+
+  --2025
+  -- January
+  ('group', 5, 1, '10:00', '11:30', '2025-01-05', 5),
+  ('group', 2, 2, '14:00', '15:30', '2025-01-12', 6),
+
+  -- February
+  ('individual', 2, 5, '09:00', '10:30', '2025-02-03', 3),
+  ('individual', 7, 6, '13:00', '14:30', '2025-02-14', 4),
+  ('group', 10, 7, '15:00', '16:30', '2025-02-21', 5),
+  ('ensemble', 8, 8, '16:30', '18:00', '2025-02-28', 1),
+
+  -- March
+  ('individual', 9, 9, '11:00', '12:30', '2025-03-05', 3),
+  ('individual', 4, 10, '12:00', '13:30', '2025-03-12', 3),
+  ('group', 3, 11, '14:00', '15:30', '2025-03-20', 5),
+
+  -- April
+  ('individual', 4, 13, '10:00', '11:30', '2025-04-04', 3),
+  ('individual', 7, 14, '14:30', '16:00', '2025-04-11', 4),
+  ('individual', 1, 15, '09:30', '11:00', '2025-04-18', 3),
+  ('ensemble', 7, 14, '12:30', '15:00', '2025-04-23', 1),
+  ('ensemble', 6, 16, '13:30', '15:00', '2025-04-25', 1),
+
+  -- May
+  ('group', 2, 17, '15:00', '16:30', '2025-05-02', 6),
+  ('group', 1, 18, '09:00', '10:30', '2025-05-09', 5),
+  ('ensemble', 1, 19, '12:30', '14:00', '2025-05-16', 1),
+  ('ensemble', 6, 20, '14:00', '15:30', '2025-05-23', 1),
+
+  -- June
+  ('individual', 3, 1, '14:00', '15:30', '2025-06-06', 3),
+  ('ensemble', 8, 4, '11:00', '12:30', '2025-06-27', 1),
+
+  -- July
+  ('ensemble', 2, 8, '09:30', '11:00', '2025-07-24', 1),
+
+ -- August
+  ('group', 9, 9, '09:30', '11:00', '2025-08-07', 5),
+  ('group', 10, 10, '12:00', '13:30', '2025-08-14', 6),
+  ('ensemble', 8, 11, '14:00', '15:30', '2025-08-21', 1),
+  ('individual', 1, 12, '10:30', '12:00', '2025-08-22', 3),
+  ('individual', 4, 10, '11:30', '13:00', '2025-08-23', 4),
+  ('individual', 5, 15, '13:30', '15:00', '2025-08-24', 3),
+  ('individual', 6, 16, '10:30', '12:00', '2025-08-25', 3),
+  ('individual', 7, 19, '16:30', '18:00', '2025-08-28', 4),
+
+  -- September
+  ('individual', 1, 13, '15:00', '16:30', '2025-09-04', 3),
+  ('group', 6, 14, '09:30', '11:00', '2025-09-11', 5),
+  ('group', 4, 15, '10:00', '11:30', '2025-09-18', 5),
+  ('ensemble', 2, 16, '14:30', '16:00', '2025-09-25', 1),
+
+  -- October
+  ('individual', 1, 17, '14:00', '15:30', '2025-10-05', 3),
+  ('individual', 5, 18, '09:00', '10:30', '2025-10-12', 4),
+  ('individual', 2, 19, '16:00', '17:30', '2025-10-19', 3),
+  ('individual', 9, 20, '11:30', '13:00', '2025-10-26', 3),
+
+  -- November
+  ('individual', 2, 1, '11:00', '12:30', '2025-11-07', 3),
+  ('group', 7, 2, '13:30', '15:00', '2025-11-14', 6),
+
+  -- December
+  ('group', 2, 5, '15:00', '16:30', '2025-12-01', 5),
+  ('group', 4, 6, '10:30', '12:00', '2025-12-08', 5),
+  ('individual', 4, 7, '09:00', '10:30', '2025-12-15', 4),
+  ('individual', 9, 8, '14:30', '16:00', '2025-12-18', 3),
+  ('individual', 8, 8, '14:30', '16:00', '2025-12-19', 3),
+  ('ensemble', 9, 8, '14:30', '16:00', '2025-12-22', 1);
+
+  
+  INSERT INTO lesson (lesson_type,instructor_id,room_id,start_time,end_time,date_of_lesson,price_id)
+VALUES
+  --2025
+  -- January
+  ('individual', 6, 2, '14:00', '15:30', '2025-01-13', 3),
+  ('individual', 6, 3, '14:00', '15:30', '2025-01-14', 3),
+  ('individual', 6, 3, '14:00', '15:30', '2025-01-15', 3),
+  ('individual', 6, 4, '14:00', '15:30', '2025-01-16', 3),
+  ('individual', 6, 4, '14:00', '15:30', '2025-01-17', 3),
+  ('individual', 7, 1, '14:00', '15:30', '2025-01-18', 3),
+  ('individual', 7, 3, '14:00', '15:30', '2025-01-19', 3),
+  ('individual', 7, 7, '14:00', '15:30', '2025-01-20', 3),
+  ('individual', 7, 3, '16:00', '17:30', '2025-01-20', 3),
+  ('individual', 7, 8, '14:00', '15:30', '2025-01-21', 3),
+  ('individual', 8, 8, '14:00', '15:30', '2025-01-22', 3),
+  ('individual', 8, 4, '14:00', '15:30', '2025-01-23', 3),
+  ('individual', 8, 4, '14:00', '15:30', '2025-01-24', 3),
+  ('individual', 8, 3, '14:00', '15:30', '2025-01-25', 3);
+
+
+
   INSERT INTO ensemble_lesson (genre,max_of_students,min_of_students,skill_level,lesson_id)
 VALUES
+  --2024
   ('Gospel',15,5,'beginner',1),
   ('Punk',15,5,'beginner',2),
   ('Gospel',15,5,'beginner',3),
-  ('Punk',15,5,'beginner',4);
+  ('Punk',15,5,'beginner',4),
+
+  --2025
+  -- January
+
+  -- February
+('Punk',15,5,'beginner',10),
+  -- March
+
+  -- April
+('Punk',15,5,'beginner',17),
+('Rock',15,5,'beginner',18),
+  -- May
+('Gospel',15,5,'beginner',21),
+('Rock',15,5,'beginner',22),
+  -- June
+('Rock',15,5,'beginner',24),
+  -- July
+('Rock',15,5,'beginner',25),
+ -- August
+('Punk',15,5,'beginner',28),
+  -- September
+('Gospel',15,5,'beginner',37),
+  -- October
+
+  -- November
+
+  -- December
+('Gospel',15,5,'beginner',49);
+
+  INSERT INTO group_lesson (instrument_type, min_of_student, amount_of_student, skill_level, lesson_id)
+VALUES
+    -- January
+  ('guitar', 3, 6, 'beginner', 5),
+  ('drums', 3, 8, 'intermediate', 6),
+
+  -- February
+  ('trumpet', 3, 6, 'beginner', 9),
+
+  -- March
+  ('violin', 3, 6, 'beginner', 13),
+
+  -- April
+
+  -- May
+  ('guitar', 3, 7, 'intermediate', 19),
+  ('drums', 3, 6, 'beginner', 20),
+
+  -- June
+
+  -- July
+
+  -- August
+  ('trumpet', 3, 7, 'beginner', 26),
+  ('violin', 3, 8, 'intermediate', 27),
+
+  -- September
+  ('guitar', 3, 6, 'beginner', 35),
+  ('drums', 3, 7, 'beginner', 36),
+
+  -- October
+
+  -- November
+  ('trumpet', 3, 6, 'intermediate', 43),
+
+  -- December
+  ('violin', 3, 8, 'beginner', 44),
+  ('guitar', 3, 8, 'beginner', 45);
+
+
+  INSERT INTO individual_lesson (instrument_type, lesson_id, skill_level)
+VALUES
+  -- 2025
+  -- January
+  ('drums', 50, 'beginner'),
+  ('drums', 51, 'beginner'),
+  ('drums', 52, 'beginner'),
+  ('drums', 53, 'beginner'),
+  ('drums', 54, 'beginner'),
+  ('guitarr', 55, 'beginner'),
+  ('guitarr', 56, 'beginner'),
+  ('guitarr', 57, 'beginner'),
+  ('guitarr', 58, 'beginner'),
+  ('guitarr', 59, 'beginner'),
+  ('trumpet', 60, 'beginner'),
+  ('trumpet', 61, 'beginner'),
+  ('trumpet', 62, 'beginner'),
+  ('trumpet', 63, 'beginner'),
+  -- February
+  ('drums', 7, 'beginner'),
+  ('guitar', 8, 'intermediate'),
+
+  -- March
+  ('violin', 11, 'beginner'),
+  ('violin', 12, 'beginner'),
+
+  -- April
+  ('trumpet', 14, 'beginner'),
+  ('drums', 15, 'intermediate'),
+  ('guitar', 16, 'beginner'),
+
+  -- May
+
+  -- June
+  ('guitar', 23, 'beginner'),
+  -- July
+
+  -- August
+  ('violin', 29, 'beginner'),
+  ('trumpet', 30, 'intermediate'),
+  ('guitar', 31, 'beginner'),
+  ('drums', 32, 'beginner'),
+  ('violin', 33, 'intermediate'),
+
+  -- September
+  ('trumpet', 34, 'beginner'),
+
+  -- October
+  ('guitar', 38, 'beginner'),
+  ('drums', 39, 'intermediate'),
+  ('violin', 40, 'beginner'),
+  ('violin', 41, 'beginner'),
+
+  -- November
+  ('trumpet', 42, 'beginner'),
+
+  -- December
+  ('guitar', 46, 'intermediate'),
+  ('drums', 47, 'beginner'),
+  ('violin', 48, 'beginner');
 
   INSERT INTO student_lesson (student_id,lesson_id)
 VALUES
@@ -816,13 +1057,313 @@ VALUES
   (9,4),
   (10,4);
 
-INSERT INTO student_sibling (student_id)
+  INSERT INTO student_lesson (student_id,lesson_id)
 VALUES
-(5);
+-- 2025
+-- individual_lesson
+  (1,7),
+  (1,8),
+  (1,11),
+  (1,12),
+  (1,14),
+  (1,15),
+  (1,16),
+  (1,23),
+  (1,29),
+  (1,30),
+  (1,31),
+  (1,32),
+  (1,33),
+  (1,34),
+  (1,38),
+  (1,39),
+  (1,40),
+  (1,41),
+  (1,42),
+  (1,46),
+  (1,47),
+  (1,50),
+  (1,51),
+  (1,52),
+  (1,53),
+  (1,54),
+  (1,55),
+  (1,56),
+  (1,57),
+  (1,58),
+  (1,59),
+  (1,60),
+  (1,61),
+  (1,62),
+  (1,63),
 
-UPDATE student
-SET student_sibling_id = 1
-WHERE student_id IN (1,2);  
+-- group_lesson
+  -- January
+  (1,5),
+  (2,5),
+  (3,5),
+  (4,5),
+  (5,5),
+
+  (1,6),
+  (2,6),
+  (3,6),
+  (4,6),
+  (5,6),
+  -- February
+  (1,9),
+  (2,9),
+  (3,9),
+  (4,9),
+  (5,9),
+  -- March
+  (1,13),
+  (2,13),
+  (3,13),
+  (4,13),
+  (5,13),
+  -- April
+
+  -- May
+  (1,19),
+  (2,19),
+  (3,19),
+  (4,19),
+  (5,19),
+
+  (1,20),
+  (2,20),
+  (3,20),
+  (4,20),
+  (5,20),
+  -- June
+
+  -- July
+
+  -- August
+  (1,26),
+  (2,26),
+  (3,26),
+  (4,26),
+  (5,26),
+
+  (1,27),
+  (2,27),
+  (3,27),
+  (4,27),
+  (5,27),
+  -- September
+  (1,35),
+  (2,35),
+  (3,35),
+  (4,35),
+  (5,35),
+
+  (1,36),
+  (2,36),
+  (3,36),
+  (4,36),
+  (5,36),
+  -- October
+  -- November
+  (1,43),
+  (2,43),
+  (3,43),
+  (4,43),
+  (5,43),
+  -- December
+  (1,44),
+  (2,44),
+  (3,44),
+  (4,44),
+  (5,44),
+
+  (1,45),
+  (2,45),
+  (3,45),
+  (4,45),
+  (5,45),
+
+-- ensemble_lesson
+
+-- January
+
+-- February
+  (1,10),
+  (2,10),
+  (3,10),
+  (4,10),
+  (5,10),
+  (6,10),
+  (7,10),
+  (8,10),
+  (9,10),
+  (10,10),
+  (11,10),
+  (12,10),
+  (13,10),
+  (14,10),
+
+-- March
+
+-- April
+  (1,17),
+  (2,17),
+  (3,17),
+  (4,17),
+  (5,17),
+  (6,17),
+  (7,17),
+  (8,17),
+  (9,17),
+  (10,17),
+  (11,17),
+  (12,17),
+  (13,17),
+  (14,17),
+
+  (1,18),
+  (2,18),
+  (3,18),
+  (4,18),
+  (5,18),
+  (6,18),
+  (7,18),
+  (8,18),
+  (9,18),
+  (10,18),
+  (11,18),
+  (12,18),
+  (13,18),
+  (14,18),
+
+-- May
+  (1,21),
+  (2,21),
+  (3,21),
+  (4,21),
+  (5,21),
+  (6,21),
+  (7,21),
+  (8,21),
+  (9,21),
+  (10,21),
+  (11,21),
+  (12,21),
+  (13,21),
+  (14,21),
+
+  (1,22),
+  (2,22),
+  (3,22),
+  (4,22),
+  (5,22),
+  (6,22),
+  (7,22),
+  (8,22),
+  (9,22),
+  (10,22),
+  (11,22),
+  (12,22),
+  (13,22),
+  (14,22),
+
+-- June
+  (1,24),
+  (2,24),
+  (3,24),
+  (4,24),
+  (5,24),
+  (6,24),
+  (7,24),
+  (8,24),
+  (9,24),
+  (10,24),
+  (11,24),
+  (12,24),
+  (13,24),
+  (14,24),
+
+-- July
+  (1,25),
+  (2,25),
+  (3,25),
+  (4,25),
+  (5,25),
+  (6,25),
+  (7,25),
+  (8,25),
+  (9,25),
+  (10,25),
+  (11,25),
+  (12,25),
+  (13,25),
+  (14,25),
+
+-- August
+  (1,28),
+  (2,28),
+  (3,28),
+  (4,28),
+  (5,28),
+  (6,28),
+  (7,28),
+  (8,28),
+  (9,28),
+  (10,28),
+  (11,28),
+  (12,28),
+  (13,28),
+  (14,28),
+
+-- September
+  (1,37),
+  (2,37),
+  (3,37),
+  (4,37),
+  (5,37),
+  (6,37),
+  (7,37),
+  (8,37),
+  (9,37),
+  (10,37),
+  (11,37),
+  (12,37),
+  (13,37),
+  (14,37),
+
+-- October
+
+-- November
+
+-- December
+  (1,49),
+  (2,49),
+  (3,49),
+  (4,49),
+  (5,49),
+  (6,49),
+  (7,49),
+  (8,49),
+  (9,49),
+  (10,49),
+  (11,49),
+  (12,49),
+  (13,49),
+  (14,49);
+
+
+
+INSERT INTO student_sibling (student_id, student_sibling_id)
+VALUES 
+    (1, 2), -- Student 1 has a sibling Student 2
+    (1, 3), -- Student 1 has another sibling Student 3
+    (3, 1), -- Student 3 has a sibling Student 1
+    (3, 2); -- Student 3 has another sibling Student 2
+
+
+
+
 
 
 

@@ -80,8 +80,7 @@ CREATE TABLE student (
  zip_code VARCHAR(500) NOT NULL,
  street_name VARCHAR(500) NOT NULL,
  street_number VARCHAR(500) NOT NULL,
- city VARCHAR(500) NOT NULL,
- student_sibling_id INT
+ city VARCHAR(500) NOT NULL
 );
 
 ALTER TABLE student ADD CONSTRAINT PK_student PRIMARY KEY (student_id);
@@ -104,11 +103,11 @@ ALTER TABLE student_phone ADD CONSTRAINT PK_student_phone PRIMARY KEY (student_i
 
 
 CREATE TABLE student_sibling (
- student_sibling_id INT GENERATED ALWAYS AS IDENTITY NOT NULL,
- student_id INT NOT NULL
+ student_id INT NOT NULL,
+ student_sibling_id INT NOT NULL
 );
 
-ALTER TABLE student_sibling ADD CONSTRAINT PK_student_sibling PRIMARY KEY (student_sibling_id);
+ALTER TABLE student_sibling ADD CONSTRAINT PK_student_sibling PRIMARY KEY (student_id,student_sibling_id);
 
 
 CREATE TABLE lesson (
@@ -178,7 +177,7 @@ CREATE TABLE group_lesson (
 );
 
 
-CREATE TABLE induvidual_lesson (
+CREATE TABLE individual_lesson (
  instrument_type VARCHAR(500) NOT NULL,
  lesson_id INT NOT NULL,
  skill_level skill_level NOT NULL
@@ -194,9 +193,6 @@ ALTER TABLE instructor_instrument_type ADD CONSTRAINT FK_instructor_instrument_t
 ALTER TABLE instructor_phone ADD CONSTRAINT FK_instructor_phone_0 FOREIGN KEY (instructor_id) REFERENCES instructor (instructor_id);
 
 
-ALTER TABLE student ADD CONSTRAINT FK_student_0 FOREIGN KEY (student_sibling_id) REFERENCES student_sibling (student_sibling_id);
-
-
 ALTER TABLE student_email ADD CONSTRAINT FK_student_email_0 FOREIGN KEY (student_id) REFERENCES student (student_id);
 
 
@@ -204,6 +200,7 @@ ALTER TABLE student_phone ADD CONSTRAINT FK_student_phone_0 FOREIGN KEY (student
 
 
 ALTER TABLE student_sibling ADD CONSTRAINT FK_student_sibling_0 FOREIGN KEY (student_id) REFERENCES student (student_id);
+ALTER TABLE student_sibling ADD CONSTRAINT FK_student_sibling_1 FOREIGN KEY (student_sibling_id) REFERENCES student (student_id);
 
 
 ALTER TABLE lesson ADD CONSTRAINT FK_lesson_0 FOREIGN KEY (instructor_id) REFERENCES instructor (instructor_id);
@@ -231,6 +228,6 @@ ALTER TABLE ensemble_lesson ADD CONSTRAINT FK_ensemble_lesson_0 FOREIGN KEY (les
 ALTER TABLE group_lesson ADD CONSTRAINT FK_group_lesson_0 FOREIGN KEY (lesson_id) REFERENCES lesson (lesson_id);
 
 
-ALTER TABLE induvidual_lesson ADD CONSTRAINT FK_induvidual_lesson_0 FOREIGN KEY (lesson_id) REFERENCES lesson (lesson_id);
+ALTER TABLE individual_lesson ADD CONSTRAINT FK_individual_lesson_0 FOREIGN KEY (lesson_id) REFERENCES lesson (lesson_id);
 
 
