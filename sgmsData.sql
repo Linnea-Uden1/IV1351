@@ -762,10 +762,10 @@ INSERT INTO lesson (lesson_type,instructor_id,room_id,start_time,end_time,date_o
 VALUES
   --2024
   --December
-  ('ensemble',1,1,'11:30','12:30','2024-12-01',1),
-  ('ensemble',1,1,'10:15','11:15','2024-12-02',1),
-  ('ensemble',1,1,'12:30','13:30','2024-12-03',1),
-  ('ensemble',1,1,'10:00','11:00','2024-12-04',1),
+  ('ensemble',1,1,'11:30','12:30','2024-12-09',1),
+  ('ensemble',1,1,'10:15','11:15','2024-12-10',1),
+  ('ensemble',1,1,'12:30','13:30','2024-12-11',1),
+  ('ensemble',1,1,'10:00','11:00','2024-12-12',1),
 
   --2025
   -- January
@@ -842,20 +842,20 @@ VALUES
 VALUES
   --2025
   -- January
-  ('individual', 6, 2, '14:00', '15:30', '2025-01-13', 3),
-  ('individual', 6, 3, '14:00', '15:30', '2025-01-14', 3),
-  ('individual', 6, 3, '14:00', '15:30', '2025-01-15', 3),
-  ('individual', 6, 4, '14:00', '15:30', '2025-01-16', 3),
-  ('individual', 6, 4, '14:00', '15:30', '2025-01-17', 3),
-  ('individual', 7, 1, '14:00', '15:30', '2025-01-18', 3),
-  ('individual', 7, 3, '14:00', '15:30', '2025-01-19', 3),
-  ('individual', 7, 7, '14:00', '15:30', '2025-01-20', 3),
-  ('individual', 7, 3, '16:00', '17:30', '2025-01-20', 3),
-  ('individual', 7, 8, '14:00', '15:30', '2025-01-21', 3),
-  ('individual', 8, 8, '14:00', '15:30', '2025-01-22', 3),
-  ('individual', 8, 4, '14:00', '15:30', '2025-01-23', 3),
-  ('individual', 8, 4, '14:00', '15:30', '2025-01-24', 3),
-  ('individual', 8, 3, '14:00', '15:30', '2025-01-25', 3);
+  ('individual', 6, 2, '14:00', '15:30', '2024-12-13', 3),
+  ('individual', 6, 3, '14:00', '15:30', '2024-12-14', 3),
+  ('individual', 6, 3, '14:00', '15:30', '2024-12-15', 3),
+  ('individual', 6, 4, '14:00', '15:30', '2024-12-16', 3),
+  ('individual', 6, 4, '14:00', '15:30', '2024-12-17', 3),
+  ('individual', 7, 1, '14:00', '15:30', '2024-12-18', 3),
+  ('individual', 7, 3, '14:00', '15:30', '2024-12-19', 3),
+  ('individual', 7, 7, '14:00', '15:30', '2024-12-20', 3),
+  ('individual', 7, 3, '16:00', '17:30', '2024-12-20', 3),
+  ('individual', 7, 8, '14:00', '15:30', '2024-12-21', 3),
+  ('individual', 8, 8, '14:00', '15:30', '2024-12-22', 3),
+  ('individual', 8, 4, '14:00', '15:30', '2024-12-23', 3),
+  ('individual', 8, 4, '14:00', '15:30', '2024-12-24', 3),
+  ('individual', 8, 3, '14:00', '15:30', '2024-12-25', 3);
 
 
 
@@ -937,8 +937,7 @@ VALUES
 
   INSERT INTO individual_lesson (instrument_type, lesson_id, skill_level)
 VALUES
-  -- 2025
-  -- January
+  -- 2024
   ('drums', 50, 'beginner'),
   ('drums', 51, 'beginner'),
   ('drums', 52, 'beginner'),
@@ -953,6 +952,8 @@ VALUES
   ('trumpet', 61, 'beginner'),
   ('trumpet', 62, 'beginner'),
   ('trumpet', 63, 'beginner'),
+  -- 2025
+  -- January
   -- February
   ('drums', 7, 'beginner'),
   ('guitar', 8, 'intermediate'),
@@ -1059,6 +1060,22 @@ VALUES
 
   INSERT INTO student_lesson (student_id,lesson_id)
 VALUES
+-- 2024
+-- individual_lesson
+  (1,50),
+  (1,51),
+  (1,52),
+  (1,53),
+  (1,54),
+  (1,55),
+  (1,56),
+  (1,57),
+  (1,58),
+  (1,59),
+  (1,60),
+  (1,61),
+  (1,62),
+  (1,63),
 -- 2025
 -- individual_lesson
   (1,7),
@@ -1082,20 +1099,6 @@ VALUES
   (1,42),
   (1,46),
   (1,47),
-  (1,50),
-  (1,51),
-  (1,52),
-  (1,53),
-  (1,54),
-  (1,55),
-  (1,56),
-  (1,57),
-  (1,58),
-  (1,59),
-  (1,60),
-  (1,61),
-  (1,62),
-  (1,63),
 
 -- group_lesson
   -- January
@@ -1359,7 +1362,8 @@ VALUES
     (1, 2), -- Student 1 has a sibling Student 2
     (1, 3), -- Student 1 has another sibling Student 3
     (3, 1), -- Student 3 has a sibling Student 1
-    (3, 2); -- Student 3 has another sibling Student 2
+    (3, 2), -- Student 3 has another sibling Student 2
+    (4, 5); -- Student 4 has a sibling student 5
 
 
 
