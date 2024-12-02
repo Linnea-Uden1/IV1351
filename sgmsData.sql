@@ -737,17 +737,6 @@ VALUES
   ('12345','Soundygoody','47','Goodsprings',319);
 
 
-INSERT INTO price (lesson_type,skill_level,price)
-VALUES
-  ('ensemble','beginner','20');
-
-INSERT INTO lesson (lesson_type,instructor_id,room_id,start_time,end_time,date_of_lesson,price_id)
-VALUES
-  ('ensemble',1,1,'11:30','12:30','2024-12-01',1),
-  ('ensemble',1,1,'10:15','11:15','2024-12-02',1),
-  ('ensemble',1,1,'12:30','13:30','2024-12-03',1),
-  ('ensemble',1,1,'10:00','11:00','2024-12-04',1);
-
   
 INSERT INTO price (lesson_type,skill_level,price)
 VALUES
@@ -762,11 +751,11 @@ INSERT INTO lesson (lesson_type,instructor_id,room_id,start_time,end_time,date_o
 VALUES
   --2024
   --December
+
   ('ensemble',1,1,'11:30','12:30','2024-12-09',1),
   ('ensemble',1,1,'10:15','11:15','2024-12-10',1),
   ('ensemble',1,1,'12:30','13:30','2024-12-11',1),
   ('ensemble',1,1,'10:00','11:00','2024-12-12',1),
-
   --2025
   -- January
   ('group', 5, 1, '10:00', '11:30', '2025-01-05', 5),
