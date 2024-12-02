@@ -1352,7 +1352,8 @@ VALUES
     (1, 3), -- Student 1 has another sibling Student 3
     (3, 1), -- Student 3 has a sibling Student 1
     (3, 2), -- Student 3 has another sibling Student 2
-    (4, 5); -- Student 4 has a sibling student 5
+    (4, 5), -- Student 4 has a sibling student 5
+    (5, 4); -- Student 5 has a sibling student 4
 
 
 
